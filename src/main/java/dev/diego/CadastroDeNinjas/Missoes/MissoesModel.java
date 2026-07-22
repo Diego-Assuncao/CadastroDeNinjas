@@ -3,6 +3,9 @@ package dev.diego.CadastroDeNinjas.Missoes;
 import dev.diego.CadastroDeNinjas.Ninjas.Services.NinjaModel;
 import jakarta.persistence.*;
 
+import java.util.List;
+
+
 @Entity
 @Table(name="tb_missoes")
 public class MissoesModel {
@@ -14,17 +17,10 @@ public class MissoesModel {
     private String dificuldade;
 
     //Relacionando com o Ninja Model
-    @ManyToOne
-    @JoinColumn(name = "ninja_id")
-    private NinjaModel ninja;
+    @OneToMany(mappedBy = "missoes") //UMa missão pode ter vários ninjas
+    private List<NinjaModel> ninja;
 
-    public NinjaModel getNinja() {
-        return ninja;
-    }
 
-    public void setNinja(NinjaModel ninja) {
-        this.ninja = ninja;
-    }
 
     //Construtores
     public MissoesModel() {
