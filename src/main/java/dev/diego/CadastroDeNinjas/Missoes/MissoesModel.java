@@ -1,6 +1,6 @@
 package dev.diego.CadastroDeNinjas.Missoes;
 
-import dev.diego.CadastroDeNinjas.Ninjas.Services.NinjaModel;
+import dev.diego.CadastroDeNinjas.Ninjas.NinjaModel;
 import jakarta.persistence.*;
 
 import java.util.List;

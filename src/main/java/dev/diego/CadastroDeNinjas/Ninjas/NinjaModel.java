@@ -1,9 +1,7 @@
-package dev.diego.CadastroDeNinjas.Ninjas.Services;
+package dev.diego.CadastroDeNinjas.Ninjas;
 
 import dev.diego.CadastroDeNinjas.Missoes.MissoesModel;
 import jakarta.persistence.*;
-
-import java.util.List;
 
 //Entity transforma uma classe comum em uma entidade do DB
 @Entity
@@ -16,7 +14,7 @@ public class NinjaModel {
     @GeneratedValue(strategy = GenerationType.IDENTITY) //Informa a estratégia de geração do id
     private Long id;
     private String nome;
-    @Column(unique = true) //Informa que a coluna é única
+    @Column(unique = true) //Informa que a coluna é única, utilizamos sempre que estivermos tratando de dados unícos como CPF
     private String email;
     private int idade;
 
