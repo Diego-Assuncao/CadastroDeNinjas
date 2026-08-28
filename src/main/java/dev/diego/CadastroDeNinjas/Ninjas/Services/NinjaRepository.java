@@ -1,4 +1,4 @@
-package dev.diego.CadastroDeNinjas.Ninjas;
+package dev.diego.CadastroDeNinjas.Ninjas.Services;
 
 import org.springframework.data.jpa.repository.JpaRepository;
 
